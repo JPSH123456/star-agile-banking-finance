@@ -35,7 +35,7 @@ terraform {
   required_providers {
     aws = {
       source  = "hashicorp/aws"
-      version = "3.74.0"
+      version = ""~> 4.0""
     }
   }
 }
@@ -58,6 +58,6 @@ resource "aws_instance" "myec2" {
   }
 }
 resource "aws_key_pair" "deployer" {
-  key_name   = "dep_key"
+  key_name   = "jai-key"
   public_key = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCgEgx2aQRESTHi0gUR6y863bvFEZ/nYsh6UJylZR3Ed8alOLDJ7ti6VZMo9egnqg/TWm1KYyOg+xSlfY7EldCXI6tN0Tmbd5yRMJOxoK6LkOzfwsWIJUBkKNBs9u5jZ+YkEej11KuAFMbhulkpakouS2Bv7RCDoZT43vpYsqZsNjHaTPr6DggAu8QoiTwMdSE2RzNTi6rPL9jBJ+daCEcXlbD99HE5gW3Wx6feK/jzX5MmzGPTBdZ1i0Q6roDvgtGB0LfBkgMKXJ5hpiO01twGn3sV8sssh2jy6dZcbttVOR/7fbJrtdhuXfnwxSndghPaO6hruTwL4S5KEwMp3AAZ"
 }
